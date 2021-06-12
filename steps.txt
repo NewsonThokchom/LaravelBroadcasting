@@ -1,0 +1,16 @@
+1. Uncomment App\Providers\BroadcastServiceProvider in the providers config/app.php configuration file.
+2. Generate events & Listeners for Broadcast.
+3. Generate Queue Table by using command "php artisan queue:table" and migrate db.
+4. Create a Job by using the command "php artisan make:job jobname".
+5. Install the Pusher Channels PHP SDK using the Composer package manager:
+    "composer require pusher/pusher-php-server"
+6. configure Pusher Channels credentials in the config/broadcasting.php configuration file.
+7.  For Client side Installation  - install the pusher-js package since we will be using the Pusher Channels broadcaster:
+    "npm install --save-dev laravel-echo pusher-js"
+8. Once Echo is installed, we are ready to create a fresh Echo instance in our application's JavaScript.
+    A great place to do this is at the bottom of the resources/js/bootstrap.js file that is included 
+    with the Laravel framework. By default, an example Echo configuration is already included in this file 
+    - we simply need to uncomment it:
+9. Once we have uncommented and adjusted the Echo configuration according to our needs, we may compile our application's assets:
+    "npm run dev"
+    
